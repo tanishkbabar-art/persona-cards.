@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Persona Card</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; background: #0a0a0a; }
+  .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 0.3em; }
+  .slider-track { position: relative; height: 3px; background: #2a2a2a; border-radius: 2px; }
+  .slider-dot { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 12px; height: 12px; background: #8b7fff; border-radius: 50%; }
+  .progress-bar { height: 3px; background: #8b7fff; border-radius: 2px; }
+  .accent-bar { height: 3px; border-radius: 2px; }
+  .section-title { font-size: 11px; letter-spacing: 0.15em; color: #6b7280; text-transform: uppercase; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; margin-bottom: 16px; }
+</style>
+</head>
+<body class="text-gray-200 p-8">
+
+<div class="max-w-5xl mx-auto bg-[#1a1a1a] rounded-lg overflow-hidden shadow-2xl">
+
+  <!-- TOP: Avatar + Name + Quote -->
+  <div class="p-8 border-b border-gray-800 grid grid-cols-[140px_30px_1fr] gap-6">
+    <div class="flex flex-col items-center">
+      <div class="w-28 h-28 rounded-full bg-[#6b6291] flex items-center justify-center text-3xl font-semibold text-white">AS</div>
+      <div class="mt-4 px-4 py-1 rounded-full bg-[#6b6291] text-white text-xs">Proto Persona</div>
+      <div class="mt-4 text-xs text-gray-400">Confidence</div>
+      <div class="flex gap-1.5 mt-2">
+        <span class="w-2 h-2 rounded-full bg-[#8b7fff]"></span>
+        <span class="w-2 h-2 rounded-full bg-[#8b7fff]"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-700"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-700"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-700"></span>
+      </div>
+    </div>
+    <div class="vertical-text text-xs text-gray-500 self-center justify-self-center">UX RESEARCHER</div>
+    <div>
+      <div class="flex gap-2 mb-3">
+        <span class="px-3 py-1 rounded-full bg-[#1a3d35] text-[#4ade80] text-xs font-medium">B2B SaaS</span>
+        <span class="px-3 py-1 rounded-full bg-[#3d2e15] text-[#fbbf24] text-xs font-medium">Enterprise</span>
+      </div>
+      <h1 class="text-4xl font-semibold text-white">Aarav Shah</h1>
+      <p class="text-gray-400 mt-1">Senior Product Manager · Bangalore, India · 34</p>
+      <div class="mt-12 border-l-2 border-[#8b7fff] pl-4 italic text-gray-300">
+        "I need insights fast — not a 40-slide deck. Tell me what users actually struggle with."
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 SUMMARY COLUMNS -->
+  <div class="grid grid-cols-3 border-b border-gray-800">
+    <div class="p-6 border-r border-gray-800">
+      <div class="section-title">Primary Goal</div>
+      <div class="text-white">Faster research synthesis</div>
+    </div>
+    <div class="p-6 border-r border-gray-800">
+      <div class="section-title">Top Blocker</div>
+      <div class="text-white">Research doesn't reach decisions</div>
+    </div>
+    <div class="p-6">
+      <div class="section-title">Digital Maturity</div>
+      <div class="text-white">High · Power analytics user</div>
+    </div>
+  </div>
+  <!-- MAIN GRID: Pain Points + Personality | Goals + Emotional + Motivations -->
+  <div class="grid grid-cols-2">
+
+    <!-- LEFT COLUMN -->
+    <div class="p-6 border-r border-gray-800">
+      <div class="section-title">Pain Points</div>
+
+      <div class="mb-5">
+        <div class="flex justify-between items-center gap-3">
+          <div class="text-white">No structured research output sharing</div>
+          <span class="px-2 py-0.5 rounded-full bg-[#4a1515] text-[#f87171] text-xs shrink-0">Critical</span>
+        </div>
+        <div class="accent-bar bg-[#ef4444] mt-2"></div>
+        <div class="text-sm text-gray-400 mt-2">Research findings never make it into sprint decisions</div>
+      </div>
+
+      <div class="mb-5">
+        <div class="flex justify-between items-center gap-3">
+          <div class="text-white">Manual data formatting eats time</div>
+          <span class="px-2 py-0.5 rounded-full bg-[#3d2e15] text-[#fbbf24] text-xs shrink-0">High</span>
+        </div>
+        <div class="accent-bar bg-[#f59e0b] mt-2"></div>
+        <div class="text-sm text-gray-400 mt-2">3–4 hrs per week spent on reformatting outputs</div>
+      </div>
+
+      <div class="mb-8">
+        <div class="flex justify-between items-center gap-3">
+          <div class="text-white">Stakeholders ignore findings</div>
+          <span class="px-2 py-0.5 rounded-full bg-[#1e3a5f] text-[#60a5fa] text-xs shrink-0">Medium</span>
+        </div>
+        <div class="accent-bar bg-[#3b82f6] mt-2"></div>
+        <div class="text-sm text-gray-400 mt-2">No feedback loop between research and product teams</div>
+      </div>
+
+      <div class="section-title mt-8">Personality</div>
+      <div class="space-y-4">
+        <div class="grid grid-cols-[90px_1fr_90px] items-center gap-3">
+          <div class="text-sm text-gray-400">Introvert</div>
+          <div class="slider-track"><div class="slider-dot" style="left: 65%"></div></div>
+          <div class="text-sm text-gray-400 text-right">Extrovert</div>
+        </div>
+        <div class="grid grid-cols-[90px_1fr_90px] items-center gap-3">
+          <div class="text-sm text-gray-400">Analytical</div>
+          <div class="slider-track"><div class="slider-dot" style="left: 75%"></div></div>
+          <div class="text-sm text-gray-400 text-right">Creative</div>
+        </div>
+        <div class="grid grid-cols-[90px_1fr_90px] items-center gap-3">
+          <div class="text-sm text-gray-400">Risk-averse</div>
+          <div class="slider-track"><div class="slider-dot" style="left: 40%"></div></div>
+          <div class="text-sm text-gray-400 text-right">Risk-taker</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="p-6">
+      <div class="section-title">Goals</div>
+      <div class="space-y-4 mb-8">
+        <div class="flex gap-3">
+          <div class="w-6 h-6 rounded-full bg-[#2a2547] text-[#8b7fff] flex items-center justify-center text-xs shrink-0">1</div>
+          <div class="text-white">Generate shareable persona reports in under 10 minutes</div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-6 h-6 rounded-full bg-[#2a2547] text-[#8b7fff] flex items-center justify-center text-xs shrink-0">2</div>
+          <div class="text-white">Make research evidence traceable back to design decisions</div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-6 h-6 rounded-full bg-[#2a2547] text-[#8b7fff] flex items-center justify-center text-xs shrink-0">3</div>
+          <div class="text-white">Validate assumptions before sprint planning begins</div>
+        </div>
+      </div>
+
+      <div class="section-title">Emotional State</div>
+      <div class="space-y-3 mb-8">
+        <div class="grid grid-cols-[100px_1fr_90px] items-center gap-3">
+          <div class="text-sm text-gray-400">Frustrated</div>
+          <div class="slider-track"><div class="slider-dot" style="left: 70%"></div></div>
+          <div class="text-sm text-gray-400 text-right">Motivated</div>
+        </div>
+        <div class="grid grid-cols-[100px_1fr_90px] items-center gap-3">
+          <div class="text-sm text-gray-400">Overwhelmed</div>
+          <div class="slider-track"><div class="slider-dot" style="left: 55%"></div></div>
+          <div class="text-sm text-gray-400 text-right">In control</div>
+        </div>
+        <div class="grid grid-cols-[100px_1fr_90px] items-center gap-3">
+          <div class="text-sm text-gray-400">Skeptical</div>
+          <div class="slider-track"><div class="slider-dot" style="left: 45%"></div></div>
+          <div class="text-sm text-gray-400 text-right">Trusting</div>
+        </div>
+      </div>
+
+      <div class="section-title">Motivations</div>
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between text-sm"><span class="text-white">Speed of output</span><span class="text-gray-400">88%</span></div>
+          <div class="progress-bar mt-2" style="width: 88%"></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm"><span class="text-white">Stakeholder buy-in</span><span class="text-gray-400">75%</span></div>
+          <div class="progress-bar mt-2" style="width: 75%"></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm"><span class="text-white">Evidence traceability</span><span class="text-gray-400">60%</span></div>
+          <div class="progress-bar mt-2" style="width: 60%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER TAGS -->
+  <div class="p-6 border-t border-gray-800 flex justify-between items-center flex-wrap gap-3">
+    <div class="flex gap-2 flex-wrap">
+      <span class="px-3 py-1 rounded-full border border-gray-700 text-xs text-gray-400">B2B SaaS</span>
+      <span class="px-3 py-1 rounded-full border border-gray-700 text-xs text-gray-400">Enterprise 50–200</span>
+      <span class="px-3 py-1 rounded-full border border-gray-700 text-xs text-gray-400">High digital maturity</span>
+      <span class="px-3 py-1 rounded-full border border-gray-700 text-xs text-gray-400">India</span>
+    </div>
+    <div class="text-xs text-gray-500">Assumption-driven · Validate: team review</div>
+  </div>
+
+</div>
+
+</body>
+</html>
